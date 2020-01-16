@@ -18,4 +18,5 @@ public class H2Controller {
 
 		return new ResponseEntity<>(h2ModelResponse, HttpStatus.OK);
 	}
+	
 }
