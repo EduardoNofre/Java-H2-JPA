@@ -1,7 +1,7 @@
 package com.h2.jpa.exemplo.controller;
 
 
-@Api(value = "/v1/h2", description = "Responsável por Aluno")
+@Api(value = "/v1/h2", description = "Responsável por h2")
 @RestController
 @Validated
 @RequestMapping("/controlerh2")
