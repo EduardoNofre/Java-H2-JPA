@@ -28,7 +28,7 @@ public class H2Controller {
 	private H2Service h2Service;
   
   @GetMapping(path = "/consultar", produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity buscaTudo() {
+	public ResponseEntity<?> buscaTudo() {
 
 		List<H2Model> h2ModelResponse = h2Service.recuperarTodosTudo();
 
