@@ -37,7 +37,7 @@ public class H2Service {
 	}
 
 	public void update(Long id, String nome, Integer idade) {
-		
+
 		H2Model h2Model = new H2Model();
 		h2Model.setId(id);
 		h2Model.setNome(nome);
@@ -45,9 +45,7 @@ public class H2Service {
 
 		h2Dao.updatePutMapping(h2Model);
 	}
-	
-	
-	
+
 	public void updateComObjeto(H2Model h2Model) {
 
 		h2Dao.updatePutMapping(h2Model);

@@ -23,7 +23,7 @@ import com.h2.jpa.exemplo.service.H2Service;
 
 import io.swagger.annotations.Api;
 
-@Api(value = "/v1/h2", description = "Responsável por h2")
+@Api(value = "/crud", description = "Responsável por h2")
 @RestController
 @Validated
 @RequestMapping("/crud")
@@ -57,7 +57,7 @@ public class H2Controller {
 
 	@PostMapping(path = "/insere/nome/{nome}/idade/{idade}", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<?> insere(@PathVariable("nome") String nome, 
-									@PathVariable("idade") Integer idade) {
+			@PathVariable("idade") Integer idade) {
 
 		h2Service.save(nome, idade);
 		return new ResponseEntity<>("", HttpStatus.OK);
@@ -65,8 +65,8 @@ public class H2Controller {
 
 	@PutMapping(path = "/atualizaPorId/id/{id}/nome/{nome}/idade/{idade}", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<?> updatePorID(@PathVariable("id") Long id, 
-										 @PathVariable("nome") String nome,
-										 @PathVariable("idade") Integer idade) {
+			@PathVariable("nome") String nome,
+			@PathVariable("idade") Integer idade) {
 
 		h2Service.update(id, nome, idade);
 		return new ResponseEntity<>("", HttpStatus.OK);
